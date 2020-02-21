@@ -126,7 +126,7 @@ a {
   padding: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: #06226B;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -142,6 +142,11 @@ a {
 {
   padding: 10px 0;
   font-size: 22px;
+  color: white;
+  
+}
+#menu li:hover{
+  color: #D7263D;
 }
 
 /*
@@ -156,4 +161,92 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  top:20%;
+}
+.scroll-bar{
+  overflow: scroll;
+  
+  height: 80vh;
+}
+#athlete-info{
+  
+  position: relative;
+  left:-2%;
+  
+}
+#filter{
+  align-self: flex-start;
+}
+
+#home-page-img{
+  width: 100vw;
+ 
+}
+.para{
+  margin-top: 5%;
+  margin-left: 6% ;
+  display: flex;
+  flex-direction: row;
+  
+}
+.para1{
+  margin: 2% 5%;
+  
+}
+.para1 h3{
+  color: #06226B;
+  
+}
+.para1 img{
+  width: 100%;
+}
+#chart{
+  width: 70%;
+  position: fixed;
+  top:15%;
+  left: 20%;
+}
+
+.arrows{
+  justify-self: center;
+  align-self: center;
+}
+
+#news{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+.new1{
+  margin: 2% 5%;
+  
+}
+.new1 img{
+  width: 70%;
+  
+}
+
+
+
+
+#athlete-info img{
+  width: 50%;
+ margin-left: 15%;
+  padding-left: 4%;
+  height: 25%;
+}
+
+#ks{
+  padding-left: 25%;
+}
+
+#flex-history{
+  display: flex;
+  flex-direction: row;
+}
+#the-last-pic{
+  width:25%;
+  height: 85vh;
 }

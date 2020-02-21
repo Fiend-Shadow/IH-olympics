@@ -9,21 +9,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/side-page1", (req,res,next) => {
-  axios.get("https://athletes-json.herokuapp.com/athletes?ID=453")
+  axios.get("https://athletes-json.herokuapp.com/athletes")
   
   .then((athlete) => {
-    const athleteName = athlete.data[0].Name;
-    const ss = athleteName.replace(/\s+/g, '+');
     
-    console.log('ss :', ss);
     
-    axios.get(`https://www.mediawiki.org/w/api.php?action=query&list=allimages&aifrom=${ss}&format=json`)
-    .then((images) => {
+    
       
-     console.log('images.data.query.allimages :', images.data.query.allimages);
      
-      res.render('side-page1',{images: images.data.query.allimages[0].url , athlete:athlete.data[0]});
-    })
+     
+      res.render('side-page1',{athlete:athlete.data});
+    
   }).catch((err) => {
     console.log(err);
   });

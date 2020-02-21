@@ -1,34 +1,38 @@
 
 <div id="flex-containter">
-<div class="scroll-bar">
-    <p>a;dfhslj</p>
+<div >
+
+    <ul class="scroll-bar">
+        {{#each athlete}}
+        <li> {{this.Name}}</li> &nbsp;
+        {{/each}}
+    </ul>
+
+
     </div>
     <div id="athlete-info">
-<img src="{{images}}" alt="homPage-image" id= "hom-page-img">
-<h3>{{athlete.Name}}</h3>
-<p>Sex : {{athlete.Sex}}
+<img src="/images/Helen_Glover_with_2012_Olympic_Gold_medal.jpg" alt="homPage-image" >
+    <div id="ks">
+<h3>{{athlete.0.Name}}</h3>
+<p>Sex : {{athlete.0.Sex}}
     
 </p>
-<p>Age: {{athlete.Age}}</p>
-<p>Height: {{athlete.Height}}</p>
-<p>Weight: {{athlete.Weight}}</p>
-<p>Team: {{athlete.Team}}</p>
-<p>Games: {{athlete.Games}}</p>
-<p>Year: {{athlete.Year}}</p>
-<p>Season: {{athlete.Season}}</p>
-<p>City: {{athlete.City}}</p>
-<p>Sport: {{athlete.Sport}}</p>
-<p>Event: {{athlete.Event}}</p>
-<p>Medal: {{athlete.Medal}}</p>
-
+<p>Age: {{athlete.0.Age}}</p>
+<p>Height: {{athlete.0.Height}}</p>
+<p>Weight: {{athlete.0.Weight}}</p>
+<p>Team: {{athlete.0.Team}}</p>
+<p>Games: {{athlete.0.Games}}</p>
+<p>Year: {{athlete.0.Year}}</p>
+<p>Season: {{athlete.0.Season}}</p>
+<p>City: {{athlete.0.City}}</p>
+<p>Sport: {{athlete.0.Sport}}</p>
+<p>Event: {{athlete.0.Event}}</p>
+<p>Medal: {{athlete.0.Medal}}</p>
+</div>
 </div>
 
 
-<div id="filter">
-<p>lkasjdf
 
-</p>
-</div>
     
 </div>
 
