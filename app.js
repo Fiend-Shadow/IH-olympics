@@ -8,7 +8,7 @@ const hbs = require("hbs");
 const bodyParser = require("body-parser")
 
 
-const indexRouter = require('./routes/index');
+const router = require('./routes/index');
 
 require("dotenv").config();
 
@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', router);
 
 
 // catch 404 and forward to error handler
