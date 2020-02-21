@@ -3,22 +3,30 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const mongoose = require("mongoose");
+const jsonServer = require('json-server')
+const server = jsonServer.create()
 const hbs = require("hbs");
 const bodyParser = require("body-parser")
+const router = jsonServer.router('db.json')
+const middlewares = jsonServer.defaults()
 
 
-const indexRouter = require('./routes/index');
+
+
+server.use(middlewares)
+server.use(router)
+server.listen(process.env.PORT, () => {
+  console.log('JSON Server is running')
+})
+
+
+
 
 require("dotenv").config();
 
 const app = express();
 
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', router);
 
 
 // catch 404 and forward to error handler
