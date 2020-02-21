@@ -10,7 +10,7 @@ const bodyParser = require("body-parser")
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
-
+const indexRouter = require("./views/index.hbs")
 
 
 server.use(middlewares)
@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', router);
+app.use('/', indexRouter);
 
 
 // catch 404 and forward to error handler
